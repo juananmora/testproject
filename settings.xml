@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+ 
+  <pluginGroups>
+  </pluginGroups>
+  <proxies>
+                <!--<proxy>
+      <id>indra-proxy</id>
+      <active>false</active>
+      <protocol>http</protocol>
+      <username>Usuario indra</username>
+      <password>Password indra</password>
+      <host>proxy.indra.es</host>
+      <port>8080</port>
+      <nonProxyHosts>localhost|*.indra.es|127.*</nonProxyHosts>
+    </proxy> -->
+  </proxies>
+  <servers>
+ 
+  </servers>
+ 
+  <mirrors>
+ 
+  </mirrors>
+ 
+  <profiles>
+ 
+                <profile>
+                               <id>serenity</id>
+                               <activation>
+                                               <activeByDefault>true</activeByDefault>
+                               </activation>
+                               <repositories>
+                                               <repository>
+                                               <id>serenity-public</id>
+                                               <name>Serenity Public Repository</name>
+                                               <url>https://nexus.alm.gsnetcloud.corp/repository/maven-public/</url>
+                                               <releases>
+                                                               <enabled>true</enabled>
+                                                               <updatePolicy>never</updatePolicy>
+                                               </releases>
+                                               <snapshots>
+                                                               <enabled>true</enabled>
+                                                            <updatePolicy>never</updatePolicy>
+                                               </snapshots>
+                                               </repository>
+                               </repositories>
+                               <pluginRepositories>
+        <pluginRepository>
+          <id>central</id>
+          <url>https://nexus.alm.gsnetcloud.corp/repository/maven-public/</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+        </pluginRepository>
+      </pluginRepositories>
+                </profile>
+  
+  </profiles>
+ 
+</settings>
